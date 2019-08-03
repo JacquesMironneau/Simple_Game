@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+
+    //random comment
     class pokemon
     {
         public string Nom { get; private set; }
