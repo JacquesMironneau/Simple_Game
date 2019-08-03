@@ -4,7 +4,7 @@ namespace ConsoleApp1
 {
 
     //Handling fight ability of the player
-    partial class Joueur
+    class Joueur
     {
         public Pokemon pokemonCourrant { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace ConsoleApp1
 {
-    internal class Combat
+    partial class Combat
     {
         public Joueur[] Joueurs {get; set;}
 
@@ -24,9 +24,9 @@ namespace ConsoleApp1
             while (!Joueurs[1].allPokemonsKO() || !Joueurs[0].allPokemonsKO())
             {
 
-               this.currentPlayer.displayAttaque();
+               displayCombat();
 
-                this.currentPlayer.displayAttaque();
+                displayChoice();
                 int theChoice = Console.Read();
 
 
@@ -56,6 +56,7 @@ namespace ConsoleApp1
                         break;
 
                     case 2: //object
+                        displayObjects();
                         throw new NotImplementedException();
                         break;
 

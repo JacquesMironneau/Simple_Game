@@ -26,7 +26,17 @@ namespace ConsoleApp1
 
             Pokemon p2 = new Pokemon("PikachuV2", 10, 10, 10, 10, 10, a, b, c, d);
 
-            new Combat(new Joueur(), new Joueur());
+
+            Pokemon[] p8 = new Pokemon[2];
+            p8[0] = p;
+            p8[1] = p2;
+
+            Joueur Kevin = new Joueur();
+            Kevin.pokemons = p8;
+
+            Joueur Bouffon = new Joueur();
+            Bouffon.pokemons = p8;
+            new Combat(Kevin, Bouffon);
         }
     }
 }
