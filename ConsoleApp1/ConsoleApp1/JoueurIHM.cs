@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public partial class Joueur
+    public partial class Combat
     {
         //Display 0 atk 1 switch 2 item 3 fuire
         public String displayChoice()
@@ -23,7 +23,7 @@ namespace ConsoleApp1
         public String displayAttaque()
         {
             String str = "";
-            foreach(Attaque attaqueCourante in this.pokemonCourrant.moves)
+            foreach (Attaque attaqueCourante in this.currentPlayer.pokemonCourrant.Moves)
             {
                 str += attaqueCourante.nom + " Type : " + attaqueCourante.Type.Nom + " Puissance : " + attaqueCourante.Damage + "\n";
             }
@@ -34,9 +34,9 @@ namespace ConsoleApp1
         public String displayPokemons()
         {
             String str = "";
-            foreach (Pokemon pokemonCourant in this.pokemons )
+            foreach (Pokemon pokemonCourant in this.currentPlayer.pokemons )
             {
-                str += pokemonCourant.nom + " HP : " + pokemonCourant.HP +  "\n";
+                str += pokemonCourant.Nom + " HP : " + pokemonCourant.Hp +  "\n";
             }
             return "";
         }
@@ -50,7 +50,17 @@ namespace ConsoleApp1
         //nom et hp du mine et du mec en face
         public String displayCombat()
         {
-            return "";
+            String str = "";
+            
+            foreach(Joueur player in this.Joueurs)
+            {
+                if (player == this.currentPlayer)
+                    str += "Ton Pokemon : ";
+                if (player != this.currentPlayer)
+                    str += " Le pokemon du mec en face : ";
+                str += player.pokemonCourrant.Nom + " Hp : " + player.pokemonCourrant.Hp + "\n"; 
+            }
+            return str;
         }
 
       
