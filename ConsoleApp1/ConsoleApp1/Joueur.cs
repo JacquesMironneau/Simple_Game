@@ -1,0 +1,49 @@
+﻿using System;
+
+namespace ConsoleApp1
+{
+
+    //Handling fight ability of the player
+    public partial class Joueur
+    {
+        public Pokemon pokemonCourrant { get; set; }
+
+        public Pokemon[] pokemons { get; set; }
+
+        public Joueur()
+        {
+            this.pokemons = new Pokemon[6];
+            this.pokemonCourrant = pokemons[0];
+
+        }
+
+        public void attaquer(Attaque atk, Pokemon p)
+        {
+ 
+
+
+            //inflict damages
+            p.hp -= atk.damage;
+            
+            
+        }
+
+        public void switcher()
+        {
+
+        }
+
+        public void useItem(Pokemon p, item i)
+        {
+
+        }
+
+        public bool allPokemonsKO()
+        {
+            foreach (Pokemon p in pokemons)
+                if (!p.KO) return false;
+            
+            return true;
+        }
+    }
+}
