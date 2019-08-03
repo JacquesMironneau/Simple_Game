@@ -10,9 +10,9 @@ namespace ConsoleApp1
     {
         public string Nom { get; private set; }
         public int Hp { get; set; }
-        public int Atk { get;  set; }
+        public int Atk { get; set; }
         public int Def { get; set; }
-        public int Speed{ get; set; }
+        public int Speed { get; set; }
         public int Level { get; set; }
 
         public bool KO { get { return Hp > 0; } }
@@ -37,7 +37,7 @@ namespace ConsoleApp1
         }
 
 
-        public pokemon(string p_nom,int p_hp,int p_atk,int p_def,int p_speed,int p_level, Attaque p_move1, Attaque p_move2, Attaque p_move3, Attaque p_move4)
+        public pokemon(string p_nom, int p_hp, int p_atk, int p_def, int p_speed, int p_level, Attaque p_move1, Attaque p_move2, Attaque p_move3, Attaque p_move4)
         {
             this.Nom = p_nom;
             this.Hp = p_hp;

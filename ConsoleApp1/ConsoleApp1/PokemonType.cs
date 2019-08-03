@@ -11,7 +11,7 @@ namespace ConsoleApp1
         const int MULTIPLIER = 2;
         const float REDUCER = 0.5f;
 
-        public string Nom { get; private set;}
+        public string Nom { get; private set; }
 
         public PokemonType[] Faiblesses { get; private set; }
 
