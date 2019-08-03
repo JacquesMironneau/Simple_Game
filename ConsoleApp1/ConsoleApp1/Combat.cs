@@ -24,8 +24,9 @@ namespace ConsoleApp1
             while (!Joueurs[1].allPokemonsKO() || !Joueurs[0].allPokemonsKO())
             {
 
-                displayCombat();
-                displayChoice();
+               this.currentPlayer.displayAttaque();
+
+                this.currentPlayer.displayAttaque();
                 int theChoice = Console.Read();
 
 
