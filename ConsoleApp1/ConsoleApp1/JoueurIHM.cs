@@ -25,7 +25,7 @@ namespace ConsoleApp1
             String str = "";
             foreach (Attaque attaqueCourante in this.currentPlayer.pokemonCourrant.Moves)
             {
-                str += attaqueCourante.nom + " Type : " + attaqueCourante.Type.Nom + " Puissance : " + attaqueCourante.Damage + "\n";
+                str += attaqueCourante.Nom + " Type : " + attaqueCourante.Type + " Puissance : " + attaqueCourante.Damage + "\n";
             }
             return "";
         }

@@ -2,7 +2,7 @@
 
 namespace ConsoleApp1
 {
-    partial class Combat
+    public partial class Combat
     {
         public Joueur[] Joueurs {get; set;}
 
@@ -37,7 +37,7 @@ namespace ConsoleApp1
                         Pokemon otherPokemon = currentPlayer == Joueurs[0] ? Joueurs[1].pokemonCourrant : Joueurs[0].pokemonCourrant;
                         //Pick attack
 
-                        displayAttack();
+                        displayAttaque();
 
                         int choice = Console.Read();
 
