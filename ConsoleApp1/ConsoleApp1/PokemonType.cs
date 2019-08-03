@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    //co
     class PokemonType
     {
         const int MULTIPLIER = 2;

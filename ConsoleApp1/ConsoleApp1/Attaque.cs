@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    //comment pls
     class Attaque
     {
         public PokemonType Type { get ; private set; }
