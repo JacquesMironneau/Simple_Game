@@ -4,7 +4,7 @@ namespace ConsoleApp1
 {
 
     //Handling fight ability of the player
-    public partial class Joueur
+    partial class Joueur
     {
         public Pokemon pokemonCourrant { get; set; }
 
@@ -17,25 +17,20 @@ namespace ConsoleApp1
 
         }
 
-        public void attaquer(Attaque atk, Pokemon p)
+        public void Attaquer(Attaque atk, Pokemon p)
         {
- 
-
-
-            //inflict damages
-            p.hp -= atk.damage;
-            
-            
+             //inflict damages
+            p.Hp -= atk.Damage;        
         }
 
         public void switcher()
         {
-
+            Console.WriteLine("switch");
         }
 
-        public void useItem(Pokemon p, item i)
+        public void UseItem(Pokemon p)
         {
-
+            Console.WriteLine("using an item :^)");
         }
 
         public bool allPokemonsKO()

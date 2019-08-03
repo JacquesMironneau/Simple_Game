@@ -19,24 +19,35 @@ namespace ConsoleApp1
 
         private void play()
         {
-            this.currentPlayer = this.Joueurs[0].pokemonCourrant.speed  >= this.Joueurs[1].pokemonCourrant.speed ? Joueurs[0] : Joueurs[1];
+            this.currentPlayer = this.Joueurs[0].pokemonCourrant.Speed  >= this.Joueurs[1].pokemonCourrant.Speed ? Joueurs[0] : Joueurs[1];
 
-            while (true)
+            while (!Joueurs[1].allPokemonsKO() || !Joueurs[0].allPokemonsKO())
             {
-                int theChoice = 3;
+
+                displayCombat();
+                displayChoice();
+                int theChoice = Console.Read();
+
 
                 switch (theChoice)
                 {
                     case 0: //Attack
-                        Attaque atk;
+                        Attaque atk = null;
                         Pokemon otherPokemon = currentPlayer == Joueurs[0] ? Joueurs[1].pokemonCourrant : Joueurs[0].pokemonCourrant;
                         //Pick attack
-                        int choice = Console.Read();
-                        if (choice < 4 && choice > 0)
-                            atk = this.currentPlayer.pokemonCourrant.Moves[choice];
 
+                        displayAttack();
+
+                        int choice = Console.Read();
+
+                        if (choice < 4 && choice > 0)
+                        {
+                            atk = this.currentPlayer.pokemonCourrant.Moves[choice];
+                            this.currentPlayer.Attaquer(atk, otherPokemon);
+                            Console.WriteLine("attack sent");
+                        }
+                        displayCombat();
                         //use attack
-                        this.currentPlayer.attaquer(atk, otherPokemon);
 
                         break;
                     case 1: //Switch
@@ -56,13 +67,7 @@ namespace ConsoleApp1
                 }
 
                 //swap
-                this.currentPlayer = currentPlayer == this.Joueurs[0] ? this.Joueurs[1] : this.Joueurs[0];
-
-                foreach (Joueur j in Joueurs)
-                {
-
-                }
-                
+                this.currentPlayer = currentPlayer == this.Joueurs[0] ? this.Joueurs[1] : this.Joueurs[0];          
             }
           
             

@@ -12,13 +12,14 @@ namespace ConsoleApp1
         const int MULTIPLIER = 2;
         const float REDUCER = 0.5f;
 
-        public string Nom { get; private  set; }
+        public enum Tipe { Feu, Eau, Plante}
+        public Tipe Nom { get; private  set; }
 
-        public PokemonType[] Faiblesses { get; private set; }
+        public Tipe Faiblesses { get; private set; }
 
-        public PokemonType[] Resistances { get; private set; }
+        public Tipe Resistances { get; private set; }
 
-        public PokemonType(string p_nom, PokemonType[] p_faiblesses, PokemonType[] p_resistances)
+        public PokemonType(Tipe p_nom, Tipe p_faiblesses, Tipe p_resistances)
         {
             this.Nom = p_nom;
             this.Faiblesses = p_faiblesses;

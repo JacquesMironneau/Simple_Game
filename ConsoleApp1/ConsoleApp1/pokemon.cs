@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
 
     //random comment
-    class pokemon
+    class Pokemon
     {
         public string Nom { get; private set; }
         public int Hp { get;  set; }
@@ -21,7 +21,7 @@ namespace ConsoleApp1
 
         public Attaque[] Moves { get; private set; }
 
-        public pokemon(string p_nom)
+        public Pokemon(string p_nom)
         {
             this.Nom = p_nom;
             this.Hp = 25;
@@ -39,7 +39,7 @@ namespace ConsoleApp1
         }
 
 
-        public pokemon(string p_nom, int p_hp, int p_atk, int p_def, int p_speed, int p_level, Attaque p_move1, Attaque p_move2, Attaque p_move3, Attaque p_move4)
+        public Pokemon(string p_nom, int p_hp, int p_atk, int p_def, int p_speed, int p_level, Attaque p_move1, Attaque p_move2, Attaque p_move3, Attaque p_move4)
         {
             this.Nom = p_nom;
             this.Hp = p_hp;
