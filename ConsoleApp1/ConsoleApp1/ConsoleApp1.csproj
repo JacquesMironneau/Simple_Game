@@ -46,6 +46,7 @@
     <Compile Include="Attaque.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="Joueur.cs" />
+    <Compile Include="JoueurIHM.cs" />
     <Compile Include="pokemon.cs" />
     <Compile Include="PokemonType.cs" />
     <Compile Include="Program.cs" />
